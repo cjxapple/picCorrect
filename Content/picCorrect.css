@@ -1,0 +1,36 @@
+﻿.img-correct-container {
+  position: relative;
+  max-height: 500px;
+  max-width: 500px;
+  display: inline-block;
+}
+.img-correct-container img {
+  max-height: 500px;
+  max-width: 500px;
+}
+.img-correct-container .img-mark {
+  position: absolute;
+  display: inline-block;
+  color: #ff0000;
+  font-weight: bold;
+  margin-left: -5px;
+  margin-top: -10px;
+  white-space: nowrap;
+}
+.img-correct-container .img-mark:hover {
+  border: 1px solid #ff0000;
+  margin-left: -20px;
+  margin-top: -10px;
+  background-color: #f1f1f1;
+  z-index: 999;
+}
+.img-correct-container .img-mark:hover .btn-mark-increase,
+.img-correct-container .img-mark:hover .btn-mark-decrease {
+  display: inline-block;
+}
+.img-correct-container .img-mark .btn-mark-increase,
+.img-correct-container .img-mark .btn-mark-decrease {
+  padding: 0;
+  display: none;
+}
+/*# sourceMappingURL=picCorrect.css.map */

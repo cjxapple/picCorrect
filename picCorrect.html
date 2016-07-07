@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/picCorrect.css" rel="stylesheet" />    
+</head>
+<body>
+    <!--缩放控件区域-->
+    <div>
+        <a class="btn btn-default btn-zoomin"><i class="glyphicon glyphicon-minus"></i></a>
+        <a class="btn btn-default btn-zoomout"><i class="glyphicon glyphicon-plus"></i></a>
+    </div>
+    <!--批改控件区域-->
+    <div>
+        <div id="ctl-pic-correct" class="img-correct-container" value='[{"x":15,"y":10,"value":6},{"x":87.66,"y":10,"value":1},{"x":9.66,"y":75,"value":1},{"x":68,"y":97,"value":1}]'>
+            <img src="imgs/1263x738.png" />
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/ts/PicCorrect.js"></script>
+    <script>
+        var obj;
+        $(function () {
+            //初始化批改控件
+            obj = new Common.PicCorrect("#ctl-pic-correct");
+            //绑定缩放事件
+            $('.btn-zoomin').click(function () {
+                obj.Scale(-10);
+            });
+            $('.btn-zoomout').click(function () {
+                obj.Scale(10);
+            });
+            var values = obj.getValue();
+            var strValues = JSON.stringify(values);
+
+        });
+
+
+    </script>
+</body>
+
+</html>
