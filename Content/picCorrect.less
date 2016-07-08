@@ -1,0 +1,44 @@
+﻿.img-correct-container {
+    position: relative;
+    //margin: 0 auto;
+    max-height: 500px;
+    max-width: 500px;
+    display: inline-block;
+
+    img {
+        max-height: 500px;
+        max-width: 500px;
+    }
+
+    .img-mark {
+        position: absolute;
+        display: inline-block;
+        color: #ff0000;
+        font-weight: bold;
+        margin-left: -5px;
+        margin-top: -10px;
+        white-space: nowrap;
+
+
+        &:hover {
+            border: 1px solid #ff0000;
+            margin-left: -20px;
+            margin-top: -10px;
+            background-color: #f1f1f1;
+            z-index: 999;
+
+            .btn-mark-increase, .btn-mark-decrease {
+                display: inline-block;
+            }
+        }
+
+        input.img-mark-value-edit {
+            display:none;
+        }
+
+        .btn-mark-increase, .btn-mark-decrease {
+            padding: 0;
+            display: none;
+        }
+    }
+}

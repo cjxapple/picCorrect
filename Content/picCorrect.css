@@ -28,6 +28,9 @@
 .img-correct-container .img-mark:hover .btn-mark-decrease {
   display: inline-block;
 }
+.img-correct-container .img-mark input.img-mark-value-edit {
+  display: none;
+}
 .img-correct-container .img-mark .btn-mark-increase,
 .img-correct-container .img-mark .btn-mark-decrease {
   padding: 0;
