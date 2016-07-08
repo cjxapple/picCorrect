@@ -25,10 +25,14 @@
     <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/ts/PicCorrect.js"></script>
     <script>
+        function callback(value) {
+            console.log(value);
+        }
         var obj;
         $(function () {
             //初始化批改控件
-            obj = new Common.PicCorrect("#ctl-pic-correct");
+            //obj = new Common.PicCorrect("#ctl-pic-correct");
+            obj = new Common.PicCorrect("#ctl-pic-correct",false,10,callback);
             //绑定缩放事件
             $('.btn-zoomin').click(function () {
                 obj.Scale(-10);
